@@ -6,7 +6,50 @@ import plotly.express as px
 import preprocessing,helper
 import plotly.figure_factory as ff
 
+# ---------- CUSTOM CSS FOR MOBILE ----------
+st.markdown("""
+    <style>
+        /* Reduce padding on mobile */
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 2rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
 
+        /* Make text larger for readability */
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        /* Buttons full width on mobile */
+        .stButton > button {
+            width: 100%;
+            border-radius: 10px;
+            padding: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        /* Input boxes full width */
+        .stTextInput > div > div > input {
+            font-size: 1rem;
+        }
+
+        .stSelectbox > div > div {
+            font-size: 1rem;
+        }
+
+        /* Card style container */
+        .mobile-card {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# main logic
 df = pd.read_csv("athlete_events.csv")
 region_df = pd.read_csv("noc_regions.csv")
 
@@ -157,4 +200,5 @@ if user_choice == 'Athlete wise analysis':
     fig = px.line(final_df, x='Year', y=['Male', 'Female'])
     fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
     fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
+
     st.plotly_chart(fig)
