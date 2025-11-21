@@ -7,6 +7,7 @@ import preprocessing,helper
 import plotly.figure_factory as ff
 
 
+# ------------------ PAGE CONFIG ------------------
 st.set_page_config(
     page_title="Olympics Analysis Dashboard",
     page_icon="🏅",
@@ -16,31 +17,34 @@ st.set_page_config(
 # ------------------ CUSTOM CSS ------------------
 st.markdown("""
 <style>
+/* Dark Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #1e1e1e !important;
+}
+[data-testid="stSidebar"] * {
+    color: white !important;
+}
+
 /* Page background */
 .main {
     background-color: #f7f7f7;
 }
 
-/* Titles */
+/* Headings */
 h1, h2, h3 {
     font-family: 'Segoe UI', sans-serif;
     font-weight: 700;
+    color: #333;
 }
 
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background-color: #ffffff;
-    padding: 20px;
-}
-
-/* Cards */
+/* Statistic Cards */
 .metric-card {
-    padding: 15px;
+    padding: 18px;
     border-radius: 12px;
     background: white;
-    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -199,5 +203,6 @@ if user_choice == 'Athlete wise analysis':
     fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
 
     st.plotly_chart(fig)
+
 
 
