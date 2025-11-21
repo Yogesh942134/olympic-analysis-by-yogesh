@@ -7,6 +7,46 @@ import preprocessing,helper
 import plotly.figure_factory as ff
 
 
+st.set_page_config(
+    page_title="Olympics Analysis Dashboard",
+    page_icon="🏅",
+    layout="wide",
+)
+
+# ------------------ CUSTOM CSS ------------------
+st.markdown("""
+<style>
+/* Page background */
+.main {
+    background-color: #f7f7f7;
+}
+
+/* Titles */
+h1, h2, h3 {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+/* Sidebar */
+[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Cards */
+.metric-card {
+    padding: 15px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-bottom: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
+
 df = pd.read_csv("athlete_events.csv")
 region_df = pd.read_csv("noc_regions.csv")
 
@@ -159,4 +199,5 @@ if user_choice == 'Athlete wise analysis':
     fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor='lightgray')
 
     st.plotly_chart(fig)
+
 
