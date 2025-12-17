@@ -2,13 +2,12 @@
 
 A **Streamlit web application** and data analysis project that explores 120 years of Olympic data to uncover insights, trends, and statistics about nations, athletes, events, and medals.
 
-📊 This is my **first data analysis project** where I use Python, Pandas and visualization libraries to build an interactive analysis dashboard. :contentReference[oaicite:1]{index=1}
-
+📊 This is my **first data analysis project** where I use Python, Pandas and visualization libraries to build an interactive analysis dashboard. 
 ---
 
 ## 🚀 Demo
 
-➡️ **Live Demo:** https://olympic-analysis-by-yogesh-21.streamlit.app/ :contentReference[oaicite:2]{index=2}
+➡️ **Live Demo:** https://olympic-analysis-by-yogesh-21.streamlit.app/ :contentReference[oaicite:2]
 
 ## 🧠 Overview
 
@@ -19,7 +18,7 @@ This project analyzes a historical dataset of Olympic athletes and results. It a
 - Compare performance across countries, sports, and seasons
 - Visualize data using charts and interactive dashboards
 
-Data source: Kaggle’s “120 years of Olympic history – athletes and results” dataset. :contentReference[oaicite:3]{index=3}
+Data source: Kaggle’s “120 years of Olympic history – athletes and results” dataset.
 
 ---
 
@@ -44,7 +43,7 @@ Data source: Kaggle’s “120 years of Olympic history – athletes and results
 - **Streamlit** – Web app framework
 - **Pandas** – Data manipulation
 - **Matplotlib / Seaborn / Plotly** – Data visualization
-- **CSV Datasets** – Olympic structured data :contentReference[oaicite:4]{index=4}
+- **CSV Datasets** – Olympic structured data 
 
 ---
 
