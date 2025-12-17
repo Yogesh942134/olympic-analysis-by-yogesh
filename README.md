@@ -7,7 +7,7 @@ A **Streamlit web application** and data analysis project that explores 120 year
 
 ## 🚀 Demo
 
-➡️ **Live Demo:** https://olympic-analysis-by-yogesh-21.streamlit.app/ :contentReference[oaicite:2]
+➡️ **Live Demo:** https://olympic-analysis-by-yogesh-21.streamlit.app/ 
 
 ## 🧠 Overview
 
